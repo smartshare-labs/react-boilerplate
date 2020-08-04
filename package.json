@@ -1,0 +1,88 @@
+{
+  "name": "virtual-seminar-beta",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@types/body-scroll-lock": "^2.6.1",
+    "@types/material-ui": "^0.21.7",
+    "@types/react-burger-menu": "^2.6.1",
+    "@types/react-toast-notifications": "^2.4.0",
+    "@zeit-ui/react": "^1.8.0-canary.5",
+    "body-scroll-lock": "^2.6.4",
+    "http-status-codes": "^1.4.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "react": "^16.13.1",
+    "react-burger-menu": "^2.7.1",
+    "react-date-picker": "^8.0.0",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "react-icons": "^3.9.0",
+    "react-intercom": "^1.0.15",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-select": "^3.1.0",
+    "react-toast-notifications": "^2.4.0",
+    "smartshare-ui": "^1.0.47",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@types/history": "^4.7.3",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.4",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "@types/react-router": "^5.1.3",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/reactstrap": "^8.0.4",
+    "@types/styled-components": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "start": "REACT_APP_ENV=local react-scripts start",
+    "start:staging": "REACT_APP_ENV=staging react-scripts start",
+    "start:prod": "REACT_APP_ENV=prod react-scripts start",
+    "build": "react-scripts build",
+    "build:staging": "PUBLIC_URL=/ NODE_ENV=production REACT_APP_ENV=staging react-scripts build",
+    "build:prod": "PUBLIC_URL=/ NODE_ENV=production REACT_APP_ENV=prod react-scripts build",
+    "build:pre-prod": "PUBLIC_URL=/ NODE_ENV=production REACT_APP_ENV=pre_prod react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 8003",
+    "lint:fix": "eslint --max-warnings 0 --ext .ts,.tsx --fix . && echo 'Lint complete.'",
+    "lint": "pre-commit run",
+    "lint-all": "pre-commit run --all-files",
+    "init-env": "brew install pre-commit && pre-commit install",
+    "deploy:staging": "./bin/deploy.sh staging",
+    "deploy:prod": "./bin/deploy.sh prod"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
